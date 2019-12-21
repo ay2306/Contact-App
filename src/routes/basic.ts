@@ -9,7 +9,8 @@ export class basicRoutes{
         app.route('/').get(this.basicController.welcome);
         app.route('/contact').get(this.basicController.retrieveContactList);
         app.route('/contact').post(basicValidator.userAddValidator,this.basicController.addContact);
-        app.route('/contact/:id').patch(this.basicController.updateContact);
-        app.route('/contact/:id').delete(this.basicController.deleteContact);
+        app.route('/contact/:id').get(basicValidator.findValidator,this.basicController.getContact);
+        app.route('/contact/:id').patch(basicValidator.updateValidator,this.basicController.updateContact);
+        app.route('/contact/:id').delete(basicValidator.findValidator,this.basicController.deleteContact);
     }
 }
