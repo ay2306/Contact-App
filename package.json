@@ -27,7 +27,7 @@
   "devDependencies": {
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "mockgoose": "^8.0.4",
     "supertest": "^4.0.2",
     "ts": "^0.2.2",
